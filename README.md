@@ -1,16 +1,18 @@
 # CS640-UBCOCEAN-Competition
 
-https://www.kaggle.com/competitions/UBC-OCEAN
+[Competition Link](https://www.kaggle.com/competitions/UBC-OCEAN)
 
-[Installation](installation.md)
+### Installation Instructions
+For installation instructions, refer to
+[Installation Guide](installation.md)
 
+## Introduction 
+Our project involved tackling the UBC OCEAN competition, where we were provided with 70% of the data to build a model. Later, our code was evaluated on a hidden test set comprising 30% of the available data.
 
 ### Step 1: Patch Creation using CLAM
-Feature Extraction using CLAM
 [https://github.com/mahmoodlab/CLAM/tree/master](CLAM)
 
-Preprocess using CLAM to extract and generate patches
-The images we used were differetn in resolution and size from the TCGA, LUCC 
+We utilized CLAM for preprocessing and patch extraction. The images we worked with varied in resolution and size compared to the TCGA, LUCC dataset, so we had to experiment with different thresholds
 
 Instead using the presets [ubc_ocean.csv](ubc_ocean.csv)
 
@@ -28,18 +30,21 @@ Final result after Foreground background Seperation
 
 <img src="images/foreground seperation.png" alt="Pre processing " height="300" align="center" />
 
-The region in green would be selected as foreground and the blue regions would be removed as holes in the image
+The green regions represent selected foreground, while the blue regions were removed as holes in the image.
 
 ### Step 2: Generating features using pre-trained model
-Generate Features for all patches using Transpath [https://github.com/Xiyue-Wang/TransPath](TransPath) / Resnet
+To generate features for all patches, we utilized Transpath alongside pre-trained models. 
+[https://github.com/Xiyue-Wang/TransPath](TransPath)
 
 Download weights for ctranspath from the official repo
 
-Run this code inside CLAM 
-[extract_features_ctranspath.py](extract_features_ctranspath.py)
+Execute the code
+[extract_features_ctranspath.py](extract_features_ctranspath.py) inside the CLAM environment.
 
 ## Step 3:  Building graph using features for patches
-Build Graph using the patch features generated in the preious step
+Utilize the patch features generated in the previous step to construct graphs.
+
+Execute the script 
 [build_graph.py](build_graph.py)
 
 ## Step 4: Running models
@@ -55,3 +60,8 @@ Scores for different models tried:
 | CLAM               | cTranspath               | 74.09 (7.3)                    |
 | Graph Transformer  | Resnet18                 | 68.5 (3.8)                     |
 | Graph Transformer  | cTranspath               | **77.3** (5.7)                 |
+
+
+## Conclusion
+The final model comprised an ensemble of models generated in each fold within the Graph Transformer architecture.
+Our model got balanced accuracy of 75%
