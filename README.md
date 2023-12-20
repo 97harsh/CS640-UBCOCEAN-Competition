@@ -15,9 +15,10 @@ Our project involved tackling the UBC OCEAN competition, where we were provided 
 <img src="images/build_graph.png" alt="Creating Graph " height="300" align="center"/>
 Image Source: Graph Transformer(Yi et al.)
 
-2. Creating graph models on 
+2. Creating graph based models on this data.
 
 <!-- TODO: Add flow to show whole process -->
+
 For more detailed description checkout 
 [Project Summary](Project_summary.md)
 
