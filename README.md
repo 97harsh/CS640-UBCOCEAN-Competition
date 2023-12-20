@@ -31,3 +31,9 @@ Run graph based models for multiple instance learning
 
 Scores for different models tried:
 
+| Prediction model   | Feature Extraction model | Balanced Accuracy, mean%(std%) |
+|--------------------|--------------------------|--------------------------------|
+| CLAM               | Resnet50                 | 65.2 (5.2)                     |
+| CLAM               | cTranspath               | 74.09 (7.3)                    |
+| Graph Transformer  | Resnet18                 | 68.5 (3.8)                     |
+| Graph Transformer  | cTranspath               | **77.3** (5.7)                 |
