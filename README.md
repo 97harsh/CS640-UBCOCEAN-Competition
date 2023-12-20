@@ -15,8 +15,13 @@ The images we used were differetn in resolution and size from the TCGA, LUCC
 Instead using the presets [ubc_ocean.csv](ubc_ocean.csv)
 
 
-CLAM pipeline <img src="images/preprocessing-pipeline.png" alt="Pre processing " height="300" />
+CLAM pipeline 
 
+<img src="images/preprocessing-pipeline.png" alt="Pre processing " height="300" />
+
+OTSU thresholding 
+
+ <img src="images/otsu_thresholding.png" alt="Pre processing " height="300" />
 
 ### Step 2: Generating features using pre-trained model
 Generate Features for all patches using Transpath [https://github.com/Xiyue-Wang/TransPath](TransPath) / Resnet
