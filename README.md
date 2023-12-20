@@ -15,7 +15,8 @@ The images we used were differetn in resolution and size from the TCGA, LUCC
 Instead using the presets [ubc_ocean.csv](ubc_ocean.csv)
 
 
-![Preprocessing](preprocessing-pipeline.png)
+[<img src="images/preprocessing-pipeline.png" alt="Alt Text"height="200" />](CLAM)
+
 
 Step 2: 
 Generate Features for all patches using Transpath [https://github.com/Xiyue-Wang/TransPath](TransPath) / Resnet
