@@ -2,9 +2,8 @@
 
 https://www.kaggle.com/competitions/UBC-OCEAN
 
+[Installation](installation.md)
 
-Requirements:
-CLAM
 
 Step 1:
 Feature Extraction using CLAM
@@ -15,9 +14,15 @@ The images we used were differetn in resolution and size from the TCGA, LUCC
 
 Instead using the presets [ubc_ocean.csv](ubc_ocean.csv)
 
+
+![Preprocessing](preprocessing-pipeline.png)
+
 Step 2: 
 Generate Features for all patches using Transpath [https://github.com/Xiyue-Wang/TransPath](TransPath) / Resnet
+
 Download weights for ctranspath from the official repo
+
+Run this code inside CLAM 
 [extract_features_ctranspath.py](extract_features_ctranspath.py)
 
 Step 3: 
