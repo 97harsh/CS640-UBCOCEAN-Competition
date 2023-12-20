@@ -24,9 +24,11 @@ OTSU thresholding
  <img src="images/otsu_thresholding.png" alt="Pre processing " height="300" align="center" />
 
 
-Final result after Foreground background selection
+Final result after Foreground background Seperation
 
 <img src="images/foreground seperation.png" alt="Pre processing " height="300" align="center" />
+
+The region in green would be selected as foreground and the blue regions would be removed as holes in the image
 
 ### Step 2: Generating features using pre-trained model
 Generate Features for all patches using Transpath [https://github.com/Xiyue-Wang/TransPath](TransPath) / Resnet
