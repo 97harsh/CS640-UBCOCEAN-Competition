@@ -25,9 +25,9 @@ For more detailed description checkout
 ## Model architecture
 <!-- TODO: Add model diagrams -->
 
-[Project Presentation](CS640-UBCOCEAN-Competition/CS640_Project_Presentation.pdf)
+[Project Presentation](CS640_Project_Presentation.pdf)
 
-[Project Report](CS640-UBCOCEAN-Competition/Project_report.pdf)
+[Project Report](Project_report.pdf)
 
 ## References
 
