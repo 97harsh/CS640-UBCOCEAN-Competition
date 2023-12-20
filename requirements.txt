@@ -1,0 +1,4 @@
+torch-geometric==2.3.1
+torchsummary==1.5.1
+slideio==2.1.0
+pixman==0.40.0
