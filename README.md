@@ -10,13 +10,23 @@ For installation instructions, refer to
 Our project involved tackling the UBC OCEAN competition, where we were provided with 70% of the data to build a model. Later, our code was evaluated on a hidden test set comprising 30% of the available data.
 
 ## Steps
-<!-- TODO: add a step wise image of what's happening -->
+1. Create Graph from image
 
+<img src="images/build_graph.png" alt="Creating Graph " height="300" align="center"/>
+Image Source: Graph Transformer(Yi et al.)
+
+2. Creating graph models on 
+
+<!-- TODO: Add flow to show whole process -->
 For more detailed description checkout 
 [Project Summary](Project_summary.md)
 
 ## Model architecture
+<!-- TODO: Add model diagrams -->
 
+[Project Presentation](CS640-UBCOCEAN-Competition/CS640_Project_Presentation.pdf)
+
+[Project Report](CS640-UBCOCEAN-Competition/Project_report.pdf)
 
 ## References
 
