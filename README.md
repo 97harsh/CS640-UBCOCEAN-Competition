@@ -17,16 +17,16 @@ Instead using the presets [ubc_ocean.csv](ubc_ocean.csv)
 
 CLAM pipeline 
 
-<img src="images/preprocessing-pipeline.png" alt="Pre processing " height="300" align="center/>
+<img src="images/preprocessing-pipeline.png" alt="Pre processing " height="300" align="center"/>
 
 OTSU thresholding 
 
- <img src="images/otsu_thresholding.png" alt="Pre processing " height="300" align="center />
+ <img src="images/otsu_thresholding.png" alt="Pre processing " height="300" align="center" />
 
 
 Final result after Foreground background selection
 
-<img src="images/foreground seperation.png" alt="Pre processing " height="300" align="center />
+<img src="images/foreground seperation.png" alt="Pre processing " height="300" align="center" />
 
 ### Step 2: Generating features using pre-trained model
 Generate Features for all patches using Transpath [https://github.com/Xiyue-Wang/TransPath](TransPath) / Resnet
