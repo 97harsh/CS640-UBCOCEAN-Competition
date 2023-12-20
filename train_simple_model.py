@@ -128,12 +128,7 @@ def train(model, train_loader, val_loader, test_loader, lr=5e-3):
         if highest_val_acc<val_acc:
             highest_val_acc = val_acc
         scheduler.step(val_loss)
-        # Print metrics every epoch
-        # if(epoch % 30 == 0):
-        #     print(f'Epoch {epoch:>3} | Train Loss: {total_loss:.2f} '
-        #         f'| Train Acc: {acc*100:>5.2f}% '
-        #         f'| Val Loss: {val_loss:.2f} '
-        #         f'| Val Acc: {val_acc*100:.2f}%')
+
 
     test_loss, test_acc = test(model, test_loader)
     print(f'Test Loss: {test_loss:.2f} | Test Acc: {test_acc*100:.2f}%')
@@ -162,8 +157,6 @@ def test(model, loader):
         _, out = model(data.x, data.edge_index, data.batch)
         loss += criterion(out, data.y) / len(loader)
 
-        # acc += accuracy(out.argmax(dim=1), data.y.argmax(dim=1)) / len(loader)
-
         # Save true and predicted labels
         y_true.append(data.y.argmax(dim=1).cpu().numpy())
         y_pred.append(out.argmax(dim=1).cpu().numpy())
@@ -191,10 +184,10 @@ def accuracy(pred_y, y):
 
 
 fold = 2
-data_root="/projectnb/cs640grp/students/hsharma/UBC_processed/ctranspath_embed"
-train_set = f"/projectnb/cs640grp/students/hsharma/5folds/train_fold_{fold}.txt"
-val_set = f"/projectnb/cs640grp/students/hsharma/5folds/val_fold_{fold}.txt"
-test_set = f"/projectnb/cs640grp/students/hsharma/5folds/test_fold_{fold}.txt"
+data_root=None ## <location to image embeddings
+train_set = None ## File containing train image id's and lablels
+val_set = None ## File containing validation image id's and lablels
+test_set = None## File containing test image id's and lablels
 
 ids_train = open(train_set).readlines()
 ids_val = open(val_set).readlines()
@@ -219,7 +212,6 @@ dataloader_test = DataLoader(test_dataset, batch_size=batch_size,
 
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-# gcn = GCN(dim_h=32, dataset=train_dataset).to(device)
 
 lr_rate = [ 1e-2, 5e-3, 1e-3, 5e-4, 1e-4]
 hidden_size=[16,32,64,128,256]
@@ -240,5 +232,5 @@ for lr in lr_rate:
                 df.loc[df.index.max() +1] = [2, lr, dim_h, test_acc]
             df.to_csv(f"fold{fold}_scores.csv",index=False)
 print(df)
-# df.to_csv("fold3_scores.csv",index=False)
+
 
