@@ -16,3 +16,8 @@ To use cTranspath:
 Follow steps in https://github.com/Xiyue-Wang/TransPath/blob/main/README.md#1ctranspath
 
 
+Finally install:
+
+```
+pip install -r requirements.txt
+```
