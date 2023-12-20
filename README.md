@@ -15,7 +15,7 @@ The images we used were differetn in resolution and size from the TCGA, LUCC
 Instead using the presets [ubc_ocean.csv](ubc_ocean.csv)
 
 
-[<img src="images/preprocessing-pipeline.png" alt="Alt Text"height="200" />](CLAM)
+CLAM pipeline <img src="images/preprocessing-pipeline.png" alt="Pre processing " height="300" />
 
 
 Step 2: 
